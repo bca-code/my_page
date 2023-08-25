@@ -1,13 +1,28 @@
-const contactBtn = document.querySelector(".contact-btn");
-const contactMenu = document.querySelector(".menu-wrapper");
-let contactMenuOpen = false;
+// desktop
+const desktop = document.querySelector(".desktop");
 
-contactBtn.addEventListener("click", () => {
-  if (contactMenuOpen) {
-    contactMenu.classList.remove("expanded");
-    contactMenuOpen = false;
+// start menu
+let startMenuOpen = false;
+const startBtn = document.querySelector(".start-btn");
+const startMenu = document.querySelector(".start-menu");
+
+startBtn.addEventListener("click", (event) => {
+  // event.stopPropagation();
+  if (startMenuOpen) {
+    startMenu.classList.add("start-menu-hide");
+    startBtn.classList.remove("start-btn-clicked");
+    startMenuOpen = false;
   } else {
-    contactMenu.classList.add("expanded");
-    contactMenuOpen = true;
+    startBtn.classList.add("start-btn-clicked");
+    startMenu.classList.remove("start-menu-hide");
+    startMenuOpen = true;
+  }
+});
+
+desktop.addEventListener("click", () => {
+  if ((startMenuOpen = true)) {
+    startMenu.classList.add("start-menu-hide");
+    startBtn.classList.remove("start-btn-clicked");
+    startMenuOpen = false;
   }
 });

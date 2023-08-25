@@ -6,7 +6,7 @@
   --inactive-color: #808080;
 
   --accent-color: #d7d0c8;
-  --accent-hover: #d3d3d3;
+  --accent-hover: #c8c8c8;
   --accent-click: #c5c0b7;
 
   --border-color: #b2afab;
@@ -107,8 +107,9 @@ body {
   border: 3px inset black;
 }
 
+/* javascript */
 .start-btn-clicked {
-  background-color: var(--accent-click);
+  background-color: var(--accent-hover);
   border: 3px inset black;
 }
 
@@ -121,74 +122,77 @@ body {
 }
 
 .start-menu {
-  --menu-height: 15rem;
-
   display: flex;
   position: absolute;
+  height: 15rem;
   width: 10rem;
-  height: var(--menu-height); /* do not modify */
-  top: calc(var(--menu-height) * -1); /* do not modify */
   left: 0;
   background-color: var(--accent-color);
   border: 0.125rem outset rgb(255, 255, 255);
+
+  bottom: 100%;
+  overflow: hidden;
+
+  transition: all 100ms;
 }
 
-.start-menu-text {
+/* javascript */
+.start-menu-hide {
+  height: 0px;
+  border: none;
+}
+
+.start-menu-title {
   display: flex;
   align-items: center;
   padding-top: 0.5rem;
   writing-mode: vertical-lr;
+  white-space: nowrap;
   color: var(--desktop-text-color);
   transform: rotate(180deg);
-  font-size: 0.5rem;
-  width: 0.75rem;
+  font-size: 0.7rem;
+  width: 15%;
   overflow: hidden;
   background-color: var(--active-color);
-  background: linear-gradient(to top, black 0%, var(--active-color) 40%);
+  background: linear-gradient(to top, black 0%, var(--active-color) 60%);
 }
 
-.start-menu-items {
-  display: grid;
-  align-items: end;
+.social-media-nav {
   width: 100%;
 }
 
 .social-media-grid {
-  cursor: pointer;
+  display: grid;
+  align-items: end;
   list-style: none;
+  height: 100%;
 }
 
-.social-media-grid li:hover {
+.social-media-item {
+  height: 100%;
+}
+
+.social-media-item:hover {
   color: var(--desktop-text-color);
   background-color: var(--active-color);
 }
 
-.social-media-grid li:active {
-  opacity: 0.85;
-  color: var(--desktop-text-color); /* remove if buggy */
-  background-color: var(--active-color); /* remove if buggy */
-  transition: all 100ms;
-}
-
 .social-media-container {
-  --padding: 0.25rem;
-
   display: flex;
   align-items: center;
-  padding-top: var(--padding);
-  padding-left: var(--padding);
-  padding-bottom: var(--padding);
+  height: 100%;
+  padding-left: 0.5rem;
 }
 
 .social-media-icon {
-  height: 1.5rem;
+  width: 25%;
   border-radius: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .social-media-name {
-  font-weight: 400;
-  font-size: 0.75rem;
-  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: normal;
 }
 
 .disable-selection {
