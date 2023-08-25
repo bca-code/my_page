@@ -23,7 +23,22 @@
   transition: all 0.15s;
   font-family: Arial, Helvetica, sans-serif;
 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* defaults */
+  /* -webkit-touch-callout: auto;
+  -webkit-user-select: text;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: text;
+  user-select: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2); */
 }
 
 img,
