@@ -38,6 +38,7 @@ a {
 
 body {
   color: var(--text-color);
+  min-height: 100dvh;
   height: 100dvh;
   background-color: black;
 
@@ -52,7 +53,7 @@ body {
   margin: 0 auto;
   background-color: var(--desktop-color);
 
-  border: 5px solid red;
+  border: 5px solid blue;
 }
 
 .desktop {
