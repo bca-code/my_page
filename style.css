@@ -37,8 +37,9 @@ a {
 
 body {
   color: var(--text-color);
-  height: 100vh;
-  background-color: var(--desktop-color);
+  height: 90vh;
+  background-color: black;
+  overflow: hidden;
 }
 
 .main-wrapper {
@@ -47,11 +48,11 @@ body {
   height: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  background-color: var(--desktop-color);
 }
 
 .desktop {
   flex: 1;
-  outline: 1px dashed green;
 }
 
 .taskbar {
@@ -187,4 +188,26 @@ body {
 .bold {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media (min-width: 320px) {
+  /* Your CSS rules for small mobile phones here */
+}
+@media (min-width: 480px) {
+  /* Your CSS rules for most smartphones here */
+}
+@media (min-width: 768px) {
+  /* Your CSS rules for tablets and larger smartphones here */
+}
+@media (min-width: 992px) {
+  /* Your CSS rules for smaller desktop screens here */
+  body {
+    height: 100vh;
+  }
+}
+@media (min-width: 1200px) {
+  /* Your CSS rules for large screens and wide monitors here */
+}
+@media (min-width: 1440px) {
+  /* Your CSS rules for very large screens and wide monitors here */
 }
