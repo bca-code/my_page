@@ -37,9 +37,8 @@ a {
 
 body {
   color: var(--text-color);
-  height: 90vh;
+  height: 80vh;
   background-color: black;
-  overflow: hidden;
 }
 
 .main-wrapper {
