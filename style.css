@@ -107,6 +107,11 @@ body {
   border: 3px inset black;
 }
 
+.start-btn-clicked {
+  background-color: var(--accent-click);
+  border: 3px inset black;
+}
+
 .start-btn:active span {
   transform: translateX(0.0625rem);
 }
