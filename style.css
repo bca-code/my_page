@@ -215,6 +215,10 @@ body {
   font-weight: bold;
 }
 
+.disable-zoom {
+  touch-action: manipulation; /* disable double tap zoom */
+}
+
 @media (min-width: 320px) {
   /* Your CSS rules for small mobile phones here */
 }
