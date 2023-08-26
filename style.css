@@ -156,7 +156,7 @@ body {
   width: 20%;
   overflow: hidden;
   background-color: var(--active-color);
-  background: linear-gradient(to top, black 0%, var(--active-color) 60%);
+  background: linear-gradient(to top, black 10%, var(--active-color) 100%);
 }
 
 .social-media-nav {
@@ -223,6 +223,13 @@ body {
 }
 @media (min-width: 768px) {
   /* Your CSS rules for tablets and larger smartphones here */
+  .start-menu {
+    width: 13rem;
+  }
+
+  .start-menu-title {
+    font-size: 0.8rem;
+  }
 }
 @media (min-width: 992px) {
   /* Your CSS rules for smaller desktop screens here */
