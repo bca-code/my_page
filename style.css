@@ -208,13 +208,15 @@ body {
   height: 100%;
   padding: 0 0.25rem 0 0.25rem;
   border-right: 1px solid var(--border-color);
+
+  outline: 1px dashed blue;
 }
 
 .right-taskbar-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: var(--taskbar-secondary-width);
+  justify-content: space-around;
+  width: calc(var(--taskbar-secondary-width) * 1.1);
   height: 100%;
   padding-left: 0.125rem;
   border: 2px inset rgb(0, 0, 0);
