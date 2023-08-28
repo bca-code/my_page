@@ -20,7 +20,7 @@ startBtn.addEventListener("click", (event) => {
 });
 
 desktop.addEventListener("click", () => {
-  if ((startMenuOpen = true)) {
+  if (startMenuOpen) {
     startMenu.classList.add("start-menu-hide");
     startBtn.classList.remove("start-btn-clicked");
     startMenuOpen = false;
@@ -70,6 +70,10 @@ function getCurrentTime() {
   } else {
     timePeriod = "PM";
     hour = hour;
+  }
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
 
   convertedTime = `${hour}:${minutes} ${timePeriod}`;
