@@ -1,5 +1,22 @@
 // desktop
 const desktop = document.querySelector(".desktop");
+const desktopItems = document.querySelectorAll(".desktop-item");
+const selectState = {
+  about: false,
+  projects: false,
+  resume: false,
+  contact: false,
+};
+
+desktopItems.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.stopPropagation();
+    deselectAll();
+    const name = item.getAttribute("data-name");
+    selectState[name] = true;
+    selectDesktopItem();
+  });
+});
 
 // start menu
 let startMenuOpen = false;
@@ -22,6 +39,7 @@ startBtn.addEventListener("click", (event) => {
 // handle click offs
 
 desktop.addEventListener("click", () => {
+  deselectAll(); // deselect all icons
   if (startMenuOpen) {
     startMenu.classList.add("start-menu-hide");
     startBtn.classList.remove("start-btn-clicked");
@@ -81,3 +99,52 @@ function getCurrentTime() {
   convertedTime = `${hour}:${minutes} ${timePeriod}`;
   time.innerHTML = convertedTime;
 }
+
+function deselectAll() {
+  // This function deselects all icons currently pressed
+
+  for (const key in selectState) {
+    selectState[key] = false;
+  }
+
+  desktopItems.forEach((item) => {
+    element = item.getAttribute("data-name");
+    const icon = item.querySelector(".desktop-icon");
+    const name = item.querySelector(".desktop-name");
+    icon.src = `icons/${element}.png`;
+    name.classList.remove("select-background");
+  });
+}
+
+function selectDesktopItem() {
+  // This function selects desktop items with selectState of "true"
+
+  Object.keys(selectState).forEach((item) => {
+    const desktopItem = document.querySelector(`[data-name="${item}"`);
+    if (selectState[item] === true) {
+      const icon = desktopItem.querySelector(".desktop-icon");
+      const name = desktopItem.querySelector(".desktop-name");
+
+      icon.src = `icons/${item}-clicked.png`;
+      name.classList.add("select-background");
+    }
+  });
+}
+// item.addEventListener("click", () => {
+//   if (img.src.includes("clicked")) {
+//     img.src = `icons/${item.getAttribute("data-name")}.png`;
+//   } else {
+//     img.src = `icons/${item.getAttribute("data-name")}-clicked.png`;
+//   }
+// });
+// });
+
+// 1
+// desktopItems.forEach((item) => {
+//   const img = item.querySelector(".desktop-icon");
+//   const itemName = item.querySelector(".desktop-name");
+//   let selected = false;
+
+//   // add event listener here
+
+// });

@@ -14,7 +14,17 @@
   flex-direction: column;
   max-width: 4rem;
 
-  outline: 1px dashed blue;
+  transition: none;
+}
+
+.desktop-name {
+  padding: 0.125rem;
+  transition: none;
+}
+
+/* javascript */
+.select-background {
+  background-color: var(--active-color);
 }
 
 .about {
