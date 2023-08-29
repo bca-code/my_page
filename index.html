@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/taskbar.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>I'm Chris</title>
@@ -13,25 +15,25 @@
 
 <body>
   <div class="main-wrapper">
+
     <div class="desktop">
 
-
-      <div class="desktop-item about">
+      <div data-name="about" class="desktop-item about disable-zoom disable-selection">
         <img class="desktop-icon" src="icons/about.png" alt="About Me Icon">
         <span class="desktop-name">About Me</span>
       </div>
 
-      <div class="desktop-item projects">
+      <div class="desktop-item projects disable-zoom disable-selection">
         <img class="desktop-icon" src="icons/projects.png" alt="Projects Icon">
         <span class="desktop-name">Projects</span>
       </div>
 
-      <div class="desktop-item resume">
+      <div class="desktop-item resume disable-zoom disable-selection">
         <img class="desktop-icon" src="icons/resume.png" alt="Resume Icon">
         <span class="desktop-name">Resume</span>
       </div>
 
-      <div class="desktop-item contact">
+      <div class="desktop-item contact disable-zoom disable-selection">
         <img class="desktop-icon" src="icons/contact.png" alt="Contact Icon">
         <span class="desktop-name">Contact Me</span>
       </div>
@@ -103,7 +105,7 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,8 @@ startBtn.addEventListener("click", (event) => {
   }
 });
 
+// handle click offs
+
 desktop.addEventListener("click", () => {
   if (startMenuOpen) {
     startMenu.classList.add("start-menu-hide");
