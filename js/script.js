@@ -1,6 +1,7 @@
 // desktop
 const desktop = document.querySelector(".desktop");
 const desktopItems = document.querySelectorAll(".desktop-item");
+
 const selectState = {
   about: false,
   projects: false,
@@ -11,10 +12,20 @@ const selectState = {
 desktopItems.forEach((item) => {
   item.addEventListener("click", (event) => {
     event.stopPropagation();
-    deselectAll();
+    let doubleClicked = false;
+
     const name = item.getAttribute("data-name");
+    if (selectState[name] === true) {
+      doubleClicked = true;
+    }
+
+    deselectAll(); // handles if its a different item pressed
     selectState[name] = true;
     selectDesktopItem();
+
+    // functionality to create the window goes here based on if doubleClicked = true
+    // if (doubleClicked)
+    // .. logic
   });
 });
 
@@ -69,6 +80,38 @@ soundIcon.addEventListener("click", () => {
   }
 
   console.log(muted);
+});
+
+// clippy
+
+const quotes = [
+  "I use a Mac now...but that's besides the point.",
+  "I've always used computers as a consumer, but as I've gotten older I've grown to love how everything works.",
+  "<b>The Start Menu contains my Social Media:</b><br>1. GitHub<br>2. LinkedIn<br> 3. YouTube<br>4. ICODETHIS.",
+  "<b>The Desktop Icons have additional information such as:</b><br>1. About Me<br>2. Projects<br>3. Resume<br>4. Contact Me",
+  "Oh, that's self explanatory? Anyways..",
+  "I'm currently seeking Junior Developer opportunities. Please contact me and let's get to know eachother!",
+  "Enjoy my Developer Page!",
+];
+
+quotesIncrement = 0;
+const clippyContainer = document.querySelector(".clippy-container");
+const clippyTextBox = document.querySelector(".clippy-talk");
+clippySeen = localStorage.getItem("seenClippy") || false;
+
+if (clippySeen) {
+  clippyContainer.style.display = "none";
+}
+
+clippyContainer.addEventListener("click", () => {
+  if (quotesIncrement >= quotes.length) {
+    clippyContainer.style.animation = "fade-in 2s reverse";
+    clippyContainer.style.pointerEvents = "none";
+    localStorage.setItem("seenClippy", true);
+  } else {
+    clippyTextBox.innerHTML = quotes[quotesIncrement];
+  }
+  quotesIncrement++;
 });
 
 // functions
@@ -130,21 +173,3 @@ function selectDesktopItem() {
     }
   });
 }
-// item.addEventListener("click", () => {
-//   if (img.src.includes("clicked")) {
-//     img.src = `icons/${item.getAttribute("data-name")}.png`;
-//   } else {
-//     img.src = `icons/${item.getAttribute("data-name")}-clicked.png`;
-//   }
-// });
-// });
-
-// 1
-// desktopItems.forEach((item) => {
-//   const img = item.querySelector(".desktop-icon");
-//   const itemName = item.querySelector(".desktop-name");
-//   let selected = false;
-
-//   // add event listener here
-
-// });

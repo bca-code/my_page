@@ -16,7 +16,6 @@
   --container-padding: 0 0.5rem 0 0.5rem;
 
   --taskbar-height: 2.5rem;
-
   --taskbar-secondary-width: 4rem; /* to size the start and time wrappers */
 }
 
@@ -76,6 +75,15 @@ body {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 320px) {
