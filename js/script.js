@@ -1,3 +1,21 @@
+// sound
+let muted = false;
+const soundIcon = document.querySelector(".volume-icon");
+const clickSound = "../sfx/click.wav";
+soundVolume = 0.01;
+
+soundIcon.addEventListener("click", () => {
+  if (muted) {
+    muted = false;
+    soundIcon.src = "icons/volume-on.png";
+  } else {
+    soundIcon.src = "icons/volume-off.png";
+    muted = true;
+  }
+
+  console.log(muted);
+});
+
 // desktop
 const desktop = document.querySelector(".desktop");
 const desktopItems = document.querySelectorAll(".desktop-item");
@@ -11,6 +29,7 @@ const selectState = {
 
 desktopItems.forEach((item) => {
   item.addEventListener("click", (event) => {
+    playSound(clickSound);
     event.stopPropagation();
     let doubleClicked = false;
 
@@ -35,6 +54,8 @@ const startBtn = document.querySelector(".start-btn");
 const startMenu = document.querySelector(".start-menu");
 
 startBtn.addEventListener("click", (event) => {
+  playSound(clickSound);
+
   // event.stopPropagation();
   if (startMenuOpen) {
     startMenu.classList.add("start-menu-hide");
@@ -66,31 +87,16 @@ setInterval(() => {
   getCurrentTime();
 }, 1000);
 
-// sound
-let muted = false;
-const soundIcon = document.querySelector(".volume-icon");
-
-soundIcon.addEventListener("click", () => {
-  if (muted) {
-    soundIcon.src = "icons/volume-on.png";
-    muted = false;
-  } else {
-    soundIcon.src = "icons/volume-off.png";
-    muted = true;
-  }
-
-  console.log(muted);
-});
-
 // clippy
 
 const quotes = [
   "I use a Mac now...but that's besides the point.",
   "I've always used computers as a consumer, but as I've gotten older I've grown to appreciate how everything works.",
+  "I'm currently seeking Junior Developer opportunities. Please contact me and let's get to know eachother!",
+  "You can mute sound effects below with the speaker icon.",
   "<b>The Start Menu contains my Social Media:</b><br>1. GitHub<br>2. LinkedIn<br> 3. YouTube<br>4. ICODETHIS.",
   "<b>The Desktop Icons have additional information such as:</b><br>1. About Me<br>2. Projects<br>3. Resume<br>4. Contact Me",
   "Oh, that's self explanatory? Anyways..",
-  "I'm currently seeking Junior Developer opportunities. Please contact me and let's get to know eachother!",
   "Enjoy my Developer Page!",
 ];
 
@@ -106,6 +112,7 @@ if (clippySeen) {
 }
 
 clippyContainer.addEventListener("click", () => {
+  playSound(clickSound);
   if (quotesIncrement >= quotes.length) {
     clippyContainer.style.display = "none";
     localStorage.setItem("seenClippy", true);
@@ -125,6 +132,16 @@ displayClippyBanner.addEventListener("click", () => {
 });
 
 // functions
+
+function playSound(soundfp) {
+  if (muted) {
+    return;
+  } else {
+    const click = new Audio(soundfp);
+    click.volume = soundVolume;
+    click.play();
+  }
+}
 
 function getCurrentTime() {
   const time = document.querySelector(".time");
