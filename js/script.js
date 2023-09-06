@@ -38,13 +38,10 @@ aboutMaximize.addEventListener("click", () => {
 });
 const aboutClose = aboutWindow.querySelector(".close");
 aboutClose.addEventListener("click", () => {
-  aboutWindow.style.display = "none";
   aboutWindow.classList.remove("expand-window");
   aboutWindow.classList.remove("maximize-window");
-  setTimeout(() => {
-    aboutWindow.style.display = "block";
-  }, 100);
 });
+
 // refactor bad code above ^^^^^^^^^^^^
 
 const selectState = {
