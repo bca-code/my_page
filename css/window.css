@@ -57,14 +57,30 @@
   width: 100%;
   height: 100%;
   padding: 0.125rem;
+  overflow: scroll;
 }
 
-.window-info {
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   height: 100%;
   width: 100%;
   border: 2px inset black;
   box-shadow: -1px 0px 1px inset rgba(0, 0, 0);
   background-color: white;
+  padding: 0.25rem;
+  overflow: scroll;
+}
+
+.about-info h1,
+.about-info h2,
+.about-info h3,
+.about-info h4,
+.about-info p {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 75ch;
+  text-wrap: balance;
 }
 
 /* javascript */
