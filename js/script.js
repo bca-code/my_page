@@ -36,7 +36,7 @@ aboutMaximize.addEventListener("click", () => {
     aboutWindow.classList.add("maximize-window");
   }
 });
-const aboutClose = aboutWindow.querySelector(".close");
+const aboutClose = aboutWindow.querySelector(".close"); // this needs it's own identity right now just copying the minimize
 aboutClose.addEventListener("click", () => {
   aboutWindow.classList.remove("expand-window");
   aboutWindow.classList.remove("maximize-window");
@@ -117,13 +117,11 @@ setInterval(() => {
 // clippy
 
 const quotes = [
-  "I use a Mac now...but that's besides the point.",
   "I've always used computers as a consumer, but as I've gotten older I've grown to appreciate how everything works.",
   "I'm currently seeking Junior Developer opportunities. Please contact me and let's get to know eachother!",
   "You can mute sound effects below with the speaker icon.",
   "<b>The Start Menu contains my Social Media:</b><br>1. GitHub<br>2. LinkedIn<br> 3. YouTube<br>4. ICODETHIS.",
   "<b>The Desktop Icons have additional information such as:</b><br>1. About Me<br>2. Projects<br>3. Resume<br>4. Contact Me",
-  "Oh, that's self explanatory? Anyways..",
   "Enjoy my Developer Page!",
 ];
 
