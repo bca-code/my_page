@@ -20,6 +20,33 @@ soundIcon.addEventListener("click", () => {
 const desktop = document.querySelector(".desktop");
 const desktopItems = document.querySelectorAll(".desktop-item");
 
+// refactor bad code below vvvvvvvvvvvv
+//about
+const aboutWindow = document.querySelector(".about-window");
+const aboutMinimize = aboutWindow.querySelector(".minimize");
+aboutMinimize.addEventListener("click", () => {
+  aboutWindow.classList.remove("expand-window");
+  aboutWindow.classList.remove("maximize-window");
+});
+const aboutMaximize = aboutWindow.querySelector(".maximize");
+aboutMaximize.addEventListener("click", () => {
+  if (aboutWindow.classList.contains("maximize-window")) {
+    aboutWindow.classList.remove("maximize-window");
+  } else {
+    aboutWindow.classList.add("maximize-window");
+  }
+});
+const aboutClose = aboutWindow.querySelector(".close");
+aboutClose.addEventListener("click", () => {
+  aboutWindow.style.display = "none";
+  aboutWindow.classList.remove("expand-window");
+  aboutWindow.classList.remove("maximize-window");
+  setTimeout(() => {
+    aboutWindow.style.display = "block";
+  }, 100);
+});
+// refactor bad code above ^^^^^^^^^^^^
+
 const selectState = {
   about: false,
   projects: false,
@@ -43,8 +70,11 @@ desktopItems.forEach((item) => {
     selectDesktopItem();
 
     // functionality to create the window goes here based on if doubleClicked = true
-    // if (doubleClicked)
-    // .. logic
+
+    if (doubleClicked && name == "about") {
+      // make one for each
+      aboutWindow.classList.add("expand-window");
+    }
   });
 });
 

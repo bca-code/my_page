@@ -58,13 +58,17 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   background-color: var(--desktop-color);
+  overflow: hidden;
 }
 
 /* Global Custom*/
 
 .bold {
-  text-transform: uppercase;
   font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .disable-zoom {

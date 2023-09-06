@@ -9,6 +9,8 @@
   height: var(--taskbar-height);
   background-color: var(--accent-color);
   border-top: 0.25rem ridge white;
+
+  z-index: 10;
 }
 
 .start-wrapper {
