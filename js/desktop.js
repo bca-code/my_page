@@ -2,30 +2,6 @@
 const desktop = document.querySelector(".desktop");
 const desktopItems = document.querySelectorAll(".desktop-item");
 
-// refactor bad code below vvvvvvvvvvvv
-//about
-const aboutWindow = document.querySelector(".about-window");
-const aboutMinimize = aboutWindow.querySelector(".minimize");
-aboutMinimize.addEventListener("click", () => {
-  aboutWindow.classList.remove("expand-window");
-  aboutWindow.classList.remove("maximize-window");
-});
-const aboutMaximize = aboutWindow.querySelector(".maximize");
-aboutMaximize.addEventListener("click", () => {
-  if (aboutWindow.classList.contains("maximize-window")) {
-    aboutWindow.classList.remove("maximize-window");
-  } else {
-    aboutWindow.classList.add("maximize-window");
-  }
-});
-const aboutClose = aboutWindow.querySelector(".close"); // this needs it's own identity right now just copying the minimize
-aboutClose.addEventListener("click", () => {
-  aboutWindow.classList.remove("expand-window");
-  aboutWindow.classList.remove("maximize-window");
-});
-
-// refactor bad code above ^^^^^^^^^^^^
-
 const selectState = {
   about: false,
   projects: false,
@@ -49,10 +25,46 @@ desktopItems.forEach((item) => {
     selectDesktopItem();
 
     // functionality to create the window goes here based on if doubleClicked = true
-
-    if (doubleClicked && name == "about") {
-      // make one for each
-      aboutWindow.classList.add("expand-window");
+    if (doubleClicked === true) {
+      createWindow(name);
     }
   });
 });
+
+projectsOpen = false;
+resumeOpen = false;
+contactOpen = false;
+
+//about
+aboutOpen = false;
+const aboutWindow = document.querySelector(".about-window");
+// minimize
+const aboutMinimize = aboutWindow.querySelector(".minimize");
+aboutMinimize.addEventListener("click", () => {
+  aboutWindow.style.bottom = "-50%";
+});
+// maximize
+const aboutMaximize = aboutWindow.querySelector(".maximize");
+aboutMaximize.addEventListener("click", () => {
+  aboutWindow.classList.toggle("maximize-window");
+});
+// close
+const aboutClose = aboutWindow.querySelector(".close");
+aboutClose.addEventListener("click", () => {
+  aboutOpen = false;
+  aboutWindow.style.transition = "none";
+  aboutWindow.style.bottom = "-50%";
+  aboutWindow.classList.remove("maximize-window");
+  setTimeout(() => {
+    aboutWindow.style.transition = "";
+  }, 50);
+});
+
+// functions
+
+function createWindow(window) {
+  if (window == "about") {
+    aboutWindow.style.bottom = "50%";
+    aboutOpen = true;
+  }
+}

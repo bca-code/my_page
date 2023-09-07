@@ -85,17 +85,12 @@
 
 /* javascript */
 
-.expand-window {
+/* .expand-window {
   height: 80%;
   bottom: 50%;
-}
+} */
 
 .maximize-window {
   min-height: 100%;
   min-width: 100%;
-  bottom: 50%;
-}
-
-.no-transition {
-  transition: none;
 }
