@@ -85,12 +85,9 @@
 
 /* javascript */
 
-/* .expand-window {
-  height: 80%;
-  bottom: 50%;
-} */
-
 .maximize-window {
+  position: none;
+  bottom: 50%;
   min-height: 100%;
   min-width: 100%;
 }

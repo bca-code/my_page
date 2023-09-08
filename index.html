@@ -18,7 +18,7 @@
 <body>
   <div class="main-wrapper">
 
-    <div class="desktop">
+    <div class="desktop disable-zoom disable-selection">
 
       <div data-name="about" class="desktop-item about disable-zoom disable-selection">
         <img class="desktop-icon" src="icons/about.png" alt="About Me Icon">
@@ -70,6 +70,61 @@
           </div>
         </div>
       </div>
+
+      <!-- projects -->
+      <div class="window projects-window">
+        <div class="title-bar disable-selection disable-zoom">
+          <div class="title-bar-title">Projects</div>
+          <div class="title-bar-buttons">
+            <button class="title-btn minimize">&#95;</button>
+            <button class="title-btn maximize">&#9633;</button>
+            <button class="title-btn close">&times;</button>
+          </div>
+        </div>
+
+        <div class="window-info-wrapper">
+          <div class="projects-container"></div>
+        </div>
+      </div>
+
+      <!-- resume -->
+      <div class="window resume-window">
+        <div class="title-bar disable-selection disable-zoom">
+          <div class="title-bar-title">Resume</div>
+          <div class="title-bar-buttons">
+            <button class="title-btn minimize">&#95;</button>
+            <button class="title-btn maximize">&#9633;</button>
+            <button class="title-btn close">&times;</button>
+          </div>
+        </div>
+
+        <div class="window-info-wrapper">
+          <div class="resume-container"></div>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div class="window contact-window">
+        <div class="title-bar disable-selection disable-zoom">
+          <div class="title-bar-title">Contact Me</div>
+          <div class="title-bar-buttons">
+            <button class="title-btn minimize">&#95;</button>
+            <button class="title-btn maximize">&#9633;</button>
+            <button class="title-btn close">&times;</button>
+          </div>
+        </div>
+
+        <div class="window-info-wrapper">
+          <div class="contact-container"></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
 
       <!-- clippy -->
       <div class="clippy-container disable-zoom disable-selection">
@@ -134,7 +189,12 @@
         </div>
       </div>
 
-      <div class="tasks-wrapper"></div>
+      <div class="tasks-wrapper">
+        <span class="open-window">About</span>
+        <span class="open-window">Projects</span>
+        <span class="open-window">Resume</span>
+        <span class="open-window">Contact</span>
+      </div>
 
       <div class="right-taskbar-wrapper">
         <div class="volume-container">

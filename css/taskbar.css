@@ -16,7 +16,7 @@
 .start-wrapper {
   position: relative;
   height: 100%;
-  width: var(--taskbar-secondary-width);
+  min-width: var(--taskbar-secondary-width);
   padding-right: 0.125rem;
   border-right: 1px solid var(--border-color);
 }
@@ -144,18 +144,33 @@
 
 .tasks-wrapper {
   display: flex;
-  flex: 1;
   align-items: center;
+  justify-content: space-around;
   height: 100%;
+  width: 100%;
   padding: 0 0.25rem 0 0.25rem;
   border-right: 1px solid var(--border-color);
+  outline: 1px dashed red;
+}
+
+.open-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  min-height: 80%;
+  min-width: 2.3rem;
+  flex: 1;
+  padding: 0.125rem;
+  margin-right: 0.25rem;
+  border: 2px outset rgb(222, 222, 222);
 }
 
 .right-taskbar-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: calc(var(--taskbar-secondary-width) * 1.1);
+  min-width: calc(var(--taskbar-secondary-width) * 1.1);
   height: 100%;
   padding-left: 0.125rem;
   border: 2px inset rgb(162, 162, 162);
