@@ -5,8 +5,10 @@ const defaultHTML = projectInfoContainer.innerHTML;
 projectDetails = [
   {
     title: "Developer Page",
-    description:
-      "This is a representation of Windows 2000. <br>The goal of this project was to learn more about JavaScript.",
+    description: `
+      This is a representation of Windows 2000 for my developer page albeit a standard web-page would of been
+      sufficient I really wanted to challenge my self with something more creative.
+      `,
     thumbnail: "imgs/project-thumbnails/devpage.png",
     url: "https://bca-code.github.io/my_page/index.html",
     tags: "HTML CSS JAVASCRIPT",
