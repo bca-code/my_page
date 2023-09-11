@@ -468,8 +468,3 @@ function setZIndex() {
   createTaskbar();
   setActiveWindow();
 }
-
-setInterval(() => {
-  console.log(windowZIndex);
-  // console.log(activeWindow);
-}, 500);
