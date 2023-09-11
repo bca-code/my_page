@@ -35,7 +35,7 @@ clippyContainer.addEventListener("click", () => {
 displayClippyBanner.addEventListener("click", () => {
   quotesIncrement = 0;
   clippyTextBox.innerHTML =
-    "Welcome to my Dev Page!<br><br>This desktop recreation represents where my fascination with computers started!";
+    "Welcome to my Dev Page!<br><br>This desktop recreation represents where my fascination with computers started.<br><b>Click me to proceed.</b>";
   clippyContainer.style.display = "block";
   displayClippyBanner.style.display = "none";
 });
