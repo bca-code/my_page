@@ -118,6 +118,13 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .open-window {
+    max-width: 15%;
+  }
+  /* .project-grid {
+    grid-template-columns: repeat(5, 5rem);
+    grid-template-rows: repeat(5, 5rem);
+  } */
 }
 @media (min-width: 1200px) {
 }
@@ -131,5 +138,9 @@ body {
   body {
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
+  }
+
+  .open-window {
+    max-width: 10%;
   }
 }
