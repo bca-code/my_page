@@ -6,8 +6,8 @@ projectDetails = [
   {
     title: "Developer Page",
     description:
-      "This is a representation of Windows 2000. I thought this would be a fun project to learn more about JavaScript.",
-    thumbnail: "../imgs/project-thumbnails/devpage.png",
+      "This is a representation of Windows 2000. <br>The goal of this project was to learn more about JavaScript.",
+    thumbnail: "imgs/project-thumbnails/devpage.png",
     url: "https://bca-code.github.io/my_page/index.html",
     tags: "HTML CSS JAVASCRIPT",
   },
@@ -31,7 +31,7 @@ projects.forEach((project, index) => {
     event.stopImmediatePropagation();
     closeFolders();
     const icon = project.querySelector(".project-icon");
-    icon.src = "../icons/folder-opened.ico";
+    icon.src = "icons/folder-opened.ico";
 
     const title = projectDetails[index].title;
     const description = projectDetails[index].description;
