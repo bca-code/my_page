@@ -40,7 +40,7 @@ projects.forEach((project, index) => {
     const tags = projectDetails[index].tags;
 
     const html = `
-        <h3 class="project-name"><a href="${url}">${title}</a></h3>
+      <h3 class="project-name"><a href="${url}">${title}</a></h3>
       <h4 class="project-tags">${tags}</h4>
       <p class="project-description">${description}</p>
       <img class="project-image" src="${thumbnail}">
@@ -59,6 +59,6 @@ function closeFolders() {
   // close all folders
   projects.forEach((project) => {
     const icon = project.querySelector(".project-icon");
-    icon.src = "../icons/folder-closed.ico";
+    icon.src = "icons/folder-closed.ico";
   });
 }
