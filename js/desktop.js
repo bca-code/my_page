@@ -278,6 +278,7 @@ contactMaximize.addEventListener("click", () => {
 // close
 const contactClose = contactWindow.querySelector(".close");
 contactClose.addEventListener("click", () => {
+  clearForm();
   contactOpen = false;
   contactWindow.style.transition = "none";
   contactWindow.style.bottom = "-50%";
@@ -295,6 +296,12 @@ contactClose.addEventListener("click", () => {
 });
 
 // functions
+//
+function clearForm() {
+  // clears contact form when closed
+  const form = document.querySelector(".email-form");
+  form.reset();
+}
 
 function createTaskbar() {
   const tasksWrapper = document.querySelector(".tasks-wrapper");
