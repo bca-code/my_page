@@ -20,7 +20,7 @@ projectDetails = [
     I utilized the MoviePy and Pillow libraries to convert images into dynamic videos. Additionally, I integrated the gTTs library to add text-to-speech narration to each image. The background videos were created by cutting and editing clips from gaming videos,
     to watch along with the the storytelling. The final videos were automatically formatted for easy sharing on TikTok and Instagram Reels.
       `,
-    thumbnail: "imgs/project-thumbnails/tiktokmaker.png",
+    thumbnail: "imgs/project-thumbnails/TikTokMaker.png",
     url: "https://www.youtube.com/watch?v=D926aPQZO40",
     tags: "Python, MoviePy, Pillow, gTTs",
   },
