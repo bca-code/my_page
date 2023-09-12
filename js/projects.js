@@ -13,6 +13,17 @@ projectDetails = [
     url: "https://bca-code.github.io/my_page/index.html",
     tags: "HTML CSS JAVASCRIPT",
   },
+  {
+    title: "Automated TikTok Creator",
+    description: `
+    I created engaging social media content inspired by the trend of sharing Reddit stories on TikTok along with background videos to keep users interested. To achieve this,
+    I utilized the MoviePy and Pillow libraries to convert images into dynamic videos. Additionally, I integrated the gTTs library to add text-to-speech narration to each image. The background videos were created by cutting and editing clips from gaming videos,
+    to watch along with the the storytelling. The final videos were automatically formatted for easy sharing on TikTok and Instagram Reels.
+      `,
+    thumbnail: "imgs/project-thumbnails/tiktokmaker.png",
+    url: "https://www.youtube.com/watch?v=D926aPQZO40",
+    tags: "Python, MoviePy, Pillow, gTTs",
+  },
 ];
 
 html = "";
@@ -45,7 +56,7 @@ projects.forEach((project, index) => {
       <h3 class="project-name"><a href="${url}">${title}</a></h3>
       <h4 class="project-tags">${tags}</h4>
       <p class="project-description">${description}</p>
-      <img class="project-image" src="${thumbnail}">
+      <a target="_blank" href="${thumbnail}"><img class="project-image" src="${thumbnail}"></a>
     `;
 
     projectInfoContainer.innerHTML = html;
