@@ -1,16 +1,5 @@
 // functions
 
-function playSound(soundfp) {
-  return;
-  // if (muted) {
-  //   return;
-  // } else {
-  //   const click = new Audio(soundfp);
-  //   click.volume = soundVolume;
-  //   click.play();
-  // }
-}
-
 function getCurrentTime() {
   const time = document.querySelector(".time");
 

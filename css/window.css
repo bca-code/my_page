@@ -177,6 +177,76 @@
   color: var(--active-color);
 }
 
+.resume-container {
+  height: 100%;
+  width: 100%;
+  border: 2px inset black;
+  box-shadow: -1px 0px 1px inset rgba(0, 0, 0);
+  background-color: white;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+  overflow: scroll;
+}
+
+.contact-container {
+  height: 100%;
+  width: 100%;
+  border: 2px inset black;
+  box-shadow: -1px 0px 1px inset rgba(0, 0, 0);
+  background-color: white;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+  overflow: scroll;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+  font-size: 0.8rem;
+}
+
+.email-form input,
+.email-form textarea {
+  font-size: 0.7rem;
+}
+
+.email-form div {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.email-form label {
+  display: block;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+#fname,
+#lname,
+#phone {
+  width: 7rem;
+}
+
+#company,
+#email {
+  width: 15rem;
+  max-width: 90%;
+}
+
+#message {
+  max-width: 90%;
+}
+
+.email-form button {
+  height: 2rem;
+  width: 5rem;
+}
+
 /* javascript */
 
 .maximize-window {

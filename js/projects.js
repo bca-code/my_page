@@ -6,7 +6,7 @@ projectDetails = [
   {
     title: "Developer Page",
     description: `
-      This is a representation of Windows 2000 for my developer page albeit a standard web-page would of been
+      This is a representation of Windows 2000 for my developer page, albeit a standard web-page would of been
       sufficient I really wanted to challenge my self with something more creative.
       `,
     thumbnail: "imgs/project-thumbnails/devpage.png",

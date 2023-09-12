@@ -15,3 +15,14 @@ soundIcon.addEventListener("click", () => {
 
   console.log(muted);
 });
+
+function playSound(soundfp) {
+  return;
+  // if (muted) {
+  //   return;
+  // } else {
+  //   const click = new Audio(soundfp);
+  //   click.volume = soundVolume;
+  //   click.play();
+  // }
+}
