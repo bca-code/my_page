@@ -16,7 +16,7 @@ projectDetails = [
   {
     title: "Automated TikTok Creator",
     description: `
-    I created engaging social media content inspired by the trend of sharing Reddit stories on TikTok along with background videos to keep users interested. To achieve this,
+    I created engaging social media content inspired by the trend of sharing Reddit stories on TikTok along with background videos to keep users engaged. To achieve this,
     I utilized the MoviePy and Pillow libraries to convert images into dynamic videos. Additionally, I integrated the gTTs library to add text-to-speech narration to each image. The background videos were created by cutting and editing clips from gaming videos,
     to watch along with the the storytelling. The final videos were automatically formatted for easy sharing on TikTok and Instagram Reels.
       `,
