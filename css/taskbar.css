@@ -170,6 +170,7 @@
 .active-item {
   background-color: var(--accent-color);
   border: 2px inset rgb(222, 222, 222);
+  font-weight: bold;
 }
 
 .right-taskbar-wrapper {

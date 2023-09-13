@@ -97,6 +97,9 @@ body {
 @media (min-width: 320px) {
 }
 @media (min-width: 480px) {
+  .open-window {
+    font-size: 0.7rem;
+  }
 }
 @media (min-width: 768px) {
   /* taskbar */
@@ -115,6 +118,10 @@ body {
     border: 2px inset rgb(162, 162, 162);
     font-size: 0.75rem;
     transition: none;
+  }
+
+  .open-window {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 992px) {
